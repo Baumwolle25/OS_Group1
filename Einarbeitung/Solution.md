@@ -2,17 +2,19 @@
 
 ## Augabe 1
 
-Um einen Befehl von Anfang an im Hintergrund auszuführen, ein & anfügen
+src: https://www.redhat.com/sysadmin/jobs-bg-fg
 
-`python3 /Ex_2/Ex_2.py &`
+> Um einen Befehl von Anfang an im Hintergrund auszuführen, ein & anfügen
 
-Um einen Befehl nach dem Ausführen in den Hintergrung zu bewegen:
+- `sleep 500 &`
 
-`python3 /Ex_2/Ex_2.py`
+> Um einen Befehl nach dem Ausführen in den Hintergrund und zurück zu bewegen:
 
-Während der Ausführung: `control + Z` um den aktuell laufenden Befehl zu pausieren.
-
-Mit `bg` den Befehl in den Hintergrund schieben und fortsetzen.
+- `sleep 500`
+- Während der Ausführung: `control + Z` um den aktuell laufenden Befehl zu pausieren.
+- Mit `jobs` die Liste der aktuell laufenden Prozesse auflisten (auch mit diesen Flags: `-l`, `-n`, `-p`, `-r`, `-s`)
+- Mit `bg %x` den Befehl in den Hintergrund schieben und fortsetzen, wobei `x` die Jobnumber ist (möglich sind auch: `%abc`, `%?abc`, `%-`)
+- Mit `fg %x` den Befehl in den Vordergrund hohlen, wobei `x` die Jobnumber ist (möglich sind auch: `%abc`, `%?abc`, `%-`) 
 
 ## Aufgabe 2
 
@@ -43,3 +45,18 @@ a.printHello()
 a.printALot()
 a.waitATon(25)
 ```
+
+## Augabe 3
+
+```
+// c code here
+```
+
+## Aufgabe 4
+- Abstaktion von Hardware für Programme
+- Verwaltung von Ressourcen
+- Schutz der Hardware vor direkten Zugriffen
+- Zulassen und Abrenzung meherer Anwender
+- Virtualisierung des Speichers
+
+Abgaben von Anton Stimmer, Oscar Röth
