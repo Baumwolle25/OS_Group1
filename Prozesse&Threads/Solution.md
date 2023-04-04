@@ -6,7 +6,7 @@
 
 src: https://www.man7.org/linux/man-pages/man2/fork.2.html
 
-Das Kommando `fork` erstellt einen `Child` Thread, der zum Zeitpunkt des Erstellens mit seinem `Parrent` bis auf die `Process ID` und eine Reihe anderer Faktoren identisch ist.
+Das Kommando `fork` erstellt einen `Child` Process, der zum Zeitpunkt des Erstellens mit seinem `Parrent` bis auf die `Process ID` und eine Reihe anderer Faktoren identisch ist.
 
 >  execl
 
@@ -20,10 +20,17 @@ src: https://man7.org/linux/man-pages/man2/wait.2.html
 
 Das `waitpid` Kommando pausiert die Ausführung des aktuellen Threads bis der/die durch die `pid` spezifizierte `child` Thread/s seinen Zustand ändern.
 
-> clone
+> clone 
 
+src: https://man7.org/linux/man-pages/man2/clone.2.html
 
+`clone` erstellt ähnlich zu `fork` einen `Child` Thread, hat dabei aber präzisere Kontrolle über den Vorgang, so dass zum Beispiel Threads erstellt werden können, die sich den `virtual adress` Raum teilen.
 
+> system
+
+src: https://man7.org/linux/man-pages/man3/system.3.html
+
+`system` nutzt `fork` um einen `child` Prozess zu erstellen, der ein `shell` Kommando mithilfe von `execl` ausführt und dannach zum aktuellen Prozess zurückkehrt.
 
 ## Augabe 2
 
