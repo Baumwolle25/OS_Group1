@@ -82,14 +82,11 @@ Um den Thread zu erstellen, schreiben Sie: Thread=class_name(arguments)
 und um ihn zu starten: thread.start()
 
 Die Python-Entsprechung von pthread_join() ist die Methode join(). Sie ermöglicht einen Thread zu blockieren, bis ein anderer Thread beendet ist.
-
 Der Ziel-Thread kann von mehrere Gründen beendet werden, z.B. :
      Er beendet die Ausführung seiner Zielfunktion.
      Er beendet die Ausführung seiner Methode run(), wenn er die Klasse Thread erweitert.
      Hat einen Fehler oder eine Ausnahme erzeugt.
-
 Nachdem der Ziel-Thread seine Arbeit beendet hat, kehrt die join()-Methode zurück und der aktuelle Thread kann weiter ausgeführt werden.
-
 Die join()-Methode setzt voraus, dass man eine threading.Thread-Instanz für den Thread hat, den wir verbinden möchten.
 
 ## Aufgabe 5
