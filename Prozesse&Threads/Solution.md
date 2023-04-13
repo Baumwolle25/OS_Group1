@@ -78,4 +78,9 @@ Das OS blockiert einen Thread, wenn während der Laufzeit etwas passiert, auf da
 
 ## Aufgabe 5
 
+Wir beobachten, dass die globale Variable 0 ist, was logisch ist, da die Threads denselben Wert so oft addieren und subtrahieren.
+Wir beobachten auch, dass die Threads in der Reihenfolge (0, 1, 2, ..., 98, 99) und nacheinander eintreffen, was auf den Mutex zurückzuführen ist,
+der dafür sorgt, dass Sie nicht alle gleichzeitig auf die globale Variable zugreifen, sondern einer nach dem anderen. 
+
+
 Abgaben von Anton Stimmer, Oscar Röth
