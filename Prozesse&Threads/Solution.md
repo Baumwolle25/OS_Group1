@@ -62,7 +62,31 @@ src: https://linuxg.net/how-to-kill-processes-in-linux-and-unix/
 - Mit `ps` die `PID` der laufenden bash finden.
 - Mit `kill -9 x` wobei x die `PID` der bash ist, die bash beenden.
 
+src: https://docs.python.org/3/library/multiprocessing.html
 
+```
+from multiprocessing import Process
+import os
+
+
+def child_function():
+    pid = os.getpid()
+    for i in range(200):
+        print('child process id: ', pid)
+
+
+if __name__ == '__main__':
+    childs = []
+    for i in range(3):
+        p = Process(target=child_function)
+        childs.append(p)
+        p.start()
+    for i in range(200):
+        string_to_print = ''
+        for i in childs:
+            string_to_print = string_to_print + str(i.pid) + ',  '
+        print(string_to_print)
+```
 
 ## Aufgabe 3
 
