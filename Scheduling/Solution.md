@@ -50,9 +50,8 @@ signal.signal(signal.SIGINT, signal_handler3)
 
 while True:
     time.sleep(15)
-    
-    ```
-    ```
+```
+```
     import signal
 import os
 import sys
